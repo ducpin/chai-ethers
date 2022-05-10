@@ -46,6 +46,7 @@
   },
   "scripts": {
     "prepublishOnly": "yarn build",
+    "postinstall": "yarn build",
     "test": "cross-env NODE_ENV=test && mocha",
     "lint": "eslint '{src,test}/**/*.ts'",
     "lint:fix": "eslint --fix '{src,test}/**/*.ts'",
