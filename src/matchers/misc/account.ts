@@ -13,3 +13,10 @@ export async function getAddressOf(account: Account) {
     return account.getAddress();
   }
 }
+export async function getBalanceOf(account: Account) {
+  if (isAccount(account)) {
+    return account.provider.getBalance(account.address);
+  } else {
+    return account.getBalance();
+  }
+}

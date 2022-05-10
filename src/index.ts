@@ -8,6 +8,8 @@ import {supportProperPrivateKey} from './matchers/properPrivateKey';
 import {supportProperHex} from './matchers/properHex';
 import {supportChangeTokenBalance} from './matchers/changeTokenBalance';
 import {supportChangeTokenBalances} from './matchers/changeTokenBalances';
+import {supportChangeBalance} from './matchers/changeBalance';
+import {supportChangeBalances} from './matchers/changeBalances';
 
 export function chaiEthers(chai: Chai.ChaiStatic, utils: Chai.ChaiUtils) {
   supportBigNumber(chai.Assertion, utils);
@@ -17,6 +19,8 @@ export function chaiEthers(chai: Chai.ChaiStatic, utils: Chai.ChaiUtils) {
   supportProperAddress(chai.Assertion);
   supportProperPrivateKey(chai.Assertion);
   supportProperHex(chai.Assertion);
+  supportChangeBalance(chai.Assertion);
+  supportChangeBalances(chai.Assertion);
   supportChangeTokenBalance(chai.Assertion);
   supportChangeTokenBalances(chai.Assertion);
 }
